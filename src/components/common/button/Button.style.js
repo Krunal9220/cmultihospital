@@ -16,14 +16,15 @@ const BaseButton = styled(Button)`
 `;
 
 export const PrimaryButton = styled(BaseButton)`
-    background: #FF6337;
+    background: ${props => props.social ? '#ffffff' : '#FF6337'};
     color: #fff;
     padding: 8px 25px;
+    border: ${props => props.social ? '1px solid #FF6337' : '1px solid #ffffff'};
 
     :hover {
-        background: #ffffff;
+        background: ${props => props.social ? '#FF6337' : '#ffffff'};
         border: 1px solid #FF6337;
-        color: #FF6337;
+        color: ${props => props.social ? '#ffffff' : '#FF6337'};
     }
     :focus {
         box-shadow: none;

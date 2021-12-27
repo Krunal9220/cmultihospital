@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.passwordbtn {
+    max-width: 440px;
+    margin: 0 auto;
+    justify-content: end;
+    display: flex;
+}

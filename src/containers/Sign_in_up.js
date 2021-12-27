@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import Button, { ButtonType, buttonType } from '../components/common/button/Button';
 import InputBox from '../components/common/InputBox/InputBox';
 
@@ -22,6 +23,10 @@ function Sign_in_up(props) {
 
     const handleReset = () => {
         console.log(email)
+    }
+
+    const handleGoogleLogin = () => {
+
     }
 
     return (
@@ -84,6 +89,16 @@ function Sign_in_up(props) {
                                 </div>
                             </div>
                     }
+
+                    {
+                        reset === true ? null :
+                        <div className='passwordbtn'>
+                            <Button buttonType={ButtonType.LINK} onClick={() => setReset(true)}>Forgotten Password?</Button>
+                        </div>
+                    }
+                    
+
+        
                     
                     <div className="text-center mt-3">
                         {
@@ -95,7 +110,17 @@ function Sign_in_up(props) {
                                         <Button buttonType={ButtonType.PRIMARY} onClick={() => handleSignin()}>Sign in</Button>
                         }
                     </div>
-                    <div>
+
+                    <div className='text-center'>
+                        <p className='mt-3'>OR</p>
+                        <Button social buttonType={ButtonType.PRIMARY} onClick={() => handleGoogleLogin()}>
+                            <NavLink to={{pathname:"https://accounts.google.com/"}} target="_blank">
+                                Login With Google
+                            </NavLink>
+                        </Button>
+                    </div>
+
+                    <div className='text-center'>
                         {
                             userType === 'Signup' ?
                                 <div>
@@ -108,8 +133,6 @@ function Sign_in_up(props) {
                                     <Button buttonType={ButtonType.LINK} onClick={() => {setReset(); setUserType('Signup')}}>Signup</Button>
                                 </div>
                         }
-
-                        Forgotten Password?<Button buttonType={ButtonType.LINK} onClick={() => setReset(true)}>Click</Button>
                     </div>
                 </div>
             </div>

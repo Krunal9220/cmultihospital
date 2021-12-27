@@ -1,4 +1,6 @@
 import React from 'react';
+import Button, { ButtonType } from '../components/common/button/Button';
+import InputBox from '../components/common/InputBox/InputBox';
 
 function Appoinment(props) {
     return (
@@ -14,21 +16,21 @@ function Appoinment(props) {
                     <form action method="post" role="form" className="php-email-form">
                         <div className="row">
                             <div className="col-md-4 form-group">
-                                <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <InputBox type="text" name="name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                 <div className="validate" />
                             </div>
                             <div className="col-md-4 form-group mt-3 mt-md-0">
-                                <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <InputBox type="email" className="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                                 <div className="validate" />
                             </div>
                             <div className="col-md-4 form-group mt-3 mt-md-0">
-                                <input type="tel" className="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <InputBox type="tel" className="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                 <div className="validate" />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-4 form-group mt-3">
-                                <input type="datetime" name="date" className="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <InputBox type="datetime" name="date" className="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                 <div className="validate" />
                             </div>
                             <div className="col-md-4 form-group mt-3">
@@ -50,7 +52,7 @@ function Appoinment(props) {
                             <div className="error-message" />
                             <div className="sent-message">Your appointment request has been sent successfully. Thank you!</div>
                         </div>
-                        <div className="text-center"><button type="submit">Make an Appointment</button></div>
+                        <div className="text-center"><Button buttonType={ButtonType.PRIMARY}>Make an Appointment</Button></div>
                     </form>
                 </div>
             </section>
