@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button, { ButtonType, buttonType } from '../components/common/button/Button';
+import InputBox from '../components/common/InputBox/InputBox';
 
 function Sign_in_up(props) {
     const [userType, setUserType] = useState("Signup");
@@ -41,7 +42,7 @@ function Sign_in_up(props) {
                             userType === 'Signup' ?
                                 <div className="row justify-content-center">
                                     <div className="col-lg-4 form-group">
-                                        <input
+                                        <InputBox
                                             type="text"
                                             name="name"
                                             className="form-control"
@@ -56,7 +57,7 @@ function Sign_in_up(props) {
                     }
                     <div className="row justify-content-center">
                         <div className="col-lg-4 form-group my-2">
-                            <input
+                            <InputBox
                                 type="email"
                                 className="form-control"
                                 name="email"
@@ -71,7 +72,7 @@ function Sign_in_up(props) {
                         reset === true ? null :
                             <div className="row justify-content-center">
                                 <div className="col-lg-4 form-group">
-                                    <input
+                                    <InputBox
                                         type="password"
                                         className="form-control"
                                         name="password"
