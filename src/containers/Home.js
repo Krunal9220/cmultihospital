@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Home(props) {
   return (
@@ -44,6 +45,9 @@ function Home(props) {
                 </div>
               </div>
             </div>
+
+            <NavLink to="/counter" className="nav-link counter mx-auto"><h1 className='fs-1 text-center text-secondary mb-5 lh-lg'>Counter</h1></NavLink>
+
           </div>
         </section>
         <section id="services" className="services">

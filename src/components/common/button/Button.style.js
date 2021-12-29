@@ -19,6 +19,7 @@ export const PrimaryButton = styled(BaseButton)`
     background: ${props => props.social ? '#ffffff' : '#FF6337'};
     color: #fff;
     padding: 8px 25px;
+    max-width: 220px;
     border: ${props => props.social ? '1px solid #FF6337' : '1px solid #ffffff'};
 
     :hover {

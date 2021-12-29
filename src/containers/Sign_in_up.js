@@ -111,25 +111,30 @@ function Sign_in_up(props) {
                         }
                     </div>
 
-                    <div className='text-center'>
-                        <p className='mt-3'>OR</p>
-                        <Button social buttonType={ButtonType.PRIMARY} onClick={() => handleGoogleLogin()}>
-                            <NavLink to={{pathname:"https://accounts.google.com/"}} target="_blank">
-                                Login With Google
-                            </NavLink>
-                        </Button>
-                    </div>
+                    {
+                        reset === true ? null :
+                            userType === 'Signup' ?
+                            <div className='text-center'>
+                            <p className='mt-2 mb-1'>OR</p>
+                            <Button social buttonType={ButtonType.PRIMARY} onClick={() => handleGoogleLogin()}>
+                                <NavLink to={{pathname:"https://accounts.google.com/"}} target="_blank">
+                                    Login With Google
+                                </NavLink>
+                            </Button>
+                        </div>
+                            : null
+                    }
 
                     <div className='text-center'>
                         {
                             userType === 'Signup' ?
                                 <div>
-                                    <label>Already have an account?</label>
+                                    <label className='mt-3'>Already have an account?</label>
                                     <Button buttonType={ButtonType.LINK} onClick={() => {setReset(); setUserType('Signin')}}>Signin</Button>
                                 </div>
                             :
                                 <div>
-                                    <label>Don't Have an account?</label>
+                                    <label className='mt-3'>Don't Have an account?</label>
                                     <Button buttonType={ButtonType.LINK} onClick={() => {setReset(); setUserType('Signup')}}>Signup</Button>
                                 </div>
                         }
