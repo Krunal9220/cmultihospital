@@ -28,7 +28,7 @@ function Header(props) {
                 </div>
             </div>
             <header id="header" className="fixed-top">
-                <div className="container d-flex align-items-center">
+                <div className="container d-flex align-items-center justify-content-between">
                     <div className="logo">
                         <a href="index.html">
                             <h1 className="logo me-auto">City</h1><br />
@@ -52,15 +52,20 @@ function Header(props) {
                             <li>
                                 <NavLink to="/contact" className="nav-link scrollto">Contact</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/medicine " className="nav-link scrollto">Medicine</NavLink>
+                            </li>
                         </ul>
                         <i className="bi bi-list mobile-nav-toggle" />
                     </nav>
-                    <NavLink to="/appoinment" className="appointment-btn scrollto">
-                        <span className="d-none d-md-inline">Make an</span> Appointment
-                    </NavLink>
-                    <NavLink to="/login" className="appointment-btn scrollto">
-                        <span className="d-none d-md-inline">Login</span>
-                    </NavLink>
+                    <div>
+                        <NavLink to="/appoinment" className="appointment-btn scrollto">
+                            <span className="d-none d-md-inline">Make an</span> Appointment
+                        </NavLink>
+                        <NavLink to="/login" className="appointment-btn scrollto">
+                            <span className="d-none d-md-inline">Login</span>
+                        </NavLink>
+                    </div>
                 </div>
             </header>
         </div>

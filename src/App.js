@@ -11,6 +11,7 @@ import Counter from './containers/Counter';
 import Footer from './components/Footer';
 
 import { Route, Switch } from "react-router-dom"
+import Medicine from './containers/Medicine';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/appoinment" component={Appoinment} />
             <Route path="/login" component={Sign_in_up}/>
+            <Route path="/medicine" component={Medicine}/>
             <Route path="/counter" component={Counter}/>
           </Switch>
       <Footer />
