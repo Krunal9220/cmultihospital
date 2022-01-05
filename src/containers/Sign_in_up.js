@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
-import Button, {ButtonType,buttonType,} from "../components/common/button/Button";
+import Button, {ButtonType,buttonType} from "../components/common/button/Button";
 import InputBox from "../components/common/InputBox/InputBox";
 import { Form, FormikProvider, useFormik } from "formik";
 import * as yup from "yup";
@@ -31,24 +31,45 @@ function Sign_in_up(props) {
 
   };
 
-  const loginSchema = {
+  // const SignupSchema = {
+  //   name: yup.string()
+  //     .required("Username is must required"),
+  //   email: yup.string()
+  //     .required("E-mail is must required")
+  //     .email("Invalid"),
+  //   password: yup.string()
+  //     .required("Password is must required")
+  //     .min(8 ,"Password is must 8 character long"),
+  // };
+
+  const SigninSchema = {
     email: yup.string()
-      .required("E-mail must be required")
+      .required("E-mail is must required")
       .email("Invalid"),
     password: yup.string()
-      .required("Password must be required")
-      .min(8 ,"Password must be 8 character long"),
+      .required("Password is must required")
+      .min(8 ,"Password is must 8 character long"),
   };
 
-  let schema = yup.object().shape(loginSchema);
+  // const OtpSchema = {
+  //   email: yup.string()
+  //     .required("E-mail is must required")
+  //     .email("Invalid"),
+  //   password: yup.string()
+  //     .required("Password is must required")
+  //     .min(8 ,"Password is must 8 character long"),
+  // };
+
+  let schema = yup.object().shape(SigninSchema);
 
   const formik = useFormik({
     initialValues: {
+      name: "",
       email: "",
       password: "",
     },
     validationSchema: schema,
-    onSubmit: (values) => {
+    onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
     }
   });
@@ -80,6 +101,9 @@ function Sign_in_up(props) {
                       id="name"
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your Name"
+                      {...getFieldProps("name")}
+                      errors={Boolean(errors.name)}
+                      errorMessage={errors.name}
                     />
                   </div>
                 </div>
@@ -131,15 +155,13 @@ function Sign_in_up(props) {
               <div className="text-center mt-3">
                 {reset === true ? (
                   <Button
-                    buttonType={ButtonType.PRIMARY}
-                    onClick={() => handleReset1()}
+                    buttonType={ButtonType.PRIMARY} type="submit"
                   >
                     Send OTP or verify account
                   </Button>
                 ) : userType === "Signup" ? (
                   <Button
-                    buttonType={ButtonType.PRIMARY}
-                    onClick={() => handleSignup()}
+                    buttonType={ButtonType.PRIMARY} type="submit"
                   >
                     Sign up
                   </Button>
