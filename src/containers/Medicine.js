@@ -6,7 +6,7 @@ const orgData = [
   {
     id: 101,
     name: "Abacavir",
-    quantity: 25,
+    quantity: 26,
     price: 150,
     expiry: 2022,
   },

@@ -118,9 +118,9 @@ function Appoinment(props) {
                                             className="form-select"
                                         >
                                             <option value="0">Select Department</option>
-                                            <option value="Department 1">Department 1</option>
-                                            <option value="Department 2">Department 2</option>
-                                            <option value="Department 3">Department 3</option>
+                                            <option value="Department 1">Department-1</option>
+                                            <option value="Department 2">Department-2</option>
+                                            <option value="Department 3">Department-3</option>
                                         </select>
                                         {/* <div className="validate" /> */}
                                     </div>

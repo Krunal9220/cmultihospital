@@ -80,7 +80,7 @@ function Sign_in_up(props) {
     <div className="container mt-5 pt-5">
       <div className="section-title pt-3">
         {reset === true ? (
-          <h2>Forgotten password</h2>
+          <h2>Forgot password</h2>
         ) : userType === "Signup" ? (
           <h2>Sign Up</h2>
         ) : (
@@ -147,7 +147,7 @@ function Sign_in_up(props) {
                     buttonType={ButtonType.LINK}
                     onClick={() => setReset(true)}
                   >
-                    Forgotten Password?
+                    Forgot Password?
                   </Button>
                 </div>
               )}

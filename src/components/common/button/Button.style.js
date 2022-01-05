@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 const BaseButton = styled(Button)`
     border-radius: 50px;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.4s;
     font-size: 14px;
     display: inline-block;
     border: none;

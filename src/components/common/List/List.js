@@ -3,7 +3,7 @@ import { Card, CardBody, CardSubtitle, CardText, CardTitle } from "reactstrap";
 
 function List(props) {
     return (
-        <Card className="p-3 mx-4 col-4 w-25 ms-5 my-4">
+        <Card className="p-3 mx-5 col-4 w-25 ms-5 my-4">
             <CardBody>
                 {
                     props.data.name !== undefined ? 

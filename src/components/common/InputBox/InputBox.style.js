@@ -10,7 +10,7 @@ export const InputBoxStyle = styled(Input)`
     display: block;
     width: 100%;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #212529;
     background-color: #fff;
     background-clip: padding-box;

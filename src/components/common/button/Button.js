@@ -22,9 +22,9 @@ function Button({buttonType, children ,...rest}) {
         )
     }
     return (
-        <div>
+        <>
             
-        </div>
+        </>
     );
 }
 
